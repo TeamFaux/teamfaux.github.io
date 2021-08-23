@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>page1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style1.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <nav id="toc" class="mob">
+  </nav>
+  <main class="mainee">
+    
+
+    <div class="col my-card" >
+     <!---- <div class="dropdown" style="background-color: black;">
+        <button class="dropbtn"><i class="fa fa-bars"></i></button>
+        <div class="dropdown-content" style="left:0;">
+          <a href="#"><i class="fa fa-home" style="color: rgb(110, 110, 110);"></i></a>
+          <a href="#"><i class="fa fa-phone" style="color: rgb(110, 110, 110);"></i></a>
+        </div>
+      </div>-->
+
+     
+      <a href="../../../assets/img/square full.png"><img class="mobu" src="../../../assets/img/square full.png" width="160px"></a>
+      
+      <div>
+      
+          <div class="row" style="padding-right: 1rem;">
+              <div class="col">
+                   <p class="header-page">
+                     <style>
+                       @media (max-width: 900px) {
+                          .header-page {
+                             font-size: 26px;
+                          }
+                             }
+
+                     </style>
+                     CTF writeups<br>MuONAM CTF 2021<br>
+                
+                    </p>
+                    <div class="m-3" >
+                      <ul class="unstyled d-inline">
+                        <a href="#">
+                          <li class="d-inline-block "><i class="fa fa-user"></i> 0xar11</li>
+                          <li class="d-inline-block"><i class="fa fa-calendar"></i> 21 August 2021</li>
+                          <li class="d-inline-block"><i class="fa fa-folder"></i> Crypto</li>
+                      </ul>
+                  </div>
+                     
+                <p><br></p>
+              </div>
+          </div>
+      </div>
+
+    
+
+      
+    </div>
+    <div>
+      <p class="cont text"><br>
+        <b>Points: 150</b><br>
+        <b>Description:</b> NSA is trying to access the file sent to DONALD MCKINNEY. Maybe you can help them!!!!
+
+      </p>
+    </div>
+    <div class="hr1">
+     
+    </div>
+
+    <h1>Files and Hints</h1>
+    <div>
+      <a href="files/flag_abf168c3575c05707c5d88fa075758de.enc"> <div class="files">flag_abf168c3575c05707c5d88fa075758de.enc</div></a>
+       <p class="text">Thanks to the cordinators for giving 0 hints so far.</p>
+
+    </div>
+    <h1>Recon</h1>
+    <div >
+      <p>The challenge had a lnk opening we get.</p>
+
+      <a href="img/india1.png"><img class="responsive-img" src="img/india1.png" width="600px"></div></a>
+
+      <p>Searching through the web page we found a suspicious file in the contact section.</p>
+
+      <a href="img/india2-1.png"><img class="responsive-img" src="img/india2-1.png" width="600px"></div></a>
+
+      <p>Dwnloading the file <a href="files/mykey.pub"> <div class="files"><b>mykey.pub</b></div> </a><br>
+      By taking a look into the file we can understand that this is a RSA public key.</p>
+
+    </div>
+
+    <h2>Finding the Flag</h2>
+    <div>
+      Fortunatley for us there is tool in github called <b><a href="https://github.com/Ganapati/RsaCtfTool"><div class="links">RsaCtfTool</div></a> </b><br>
+
+      <p>Cloning the github repo:</p>
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/Ganapati/RsaCtfTool.git<br>cd RsaCtfTool
+      </code></pre></div></div>
+
+     
+      <p>Trying to crack the file using RsaCtfTool:</p>
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./RsaCtfTool.py --publickey mykey.pub --uncipherfile flag_abf168c3575c05707c5d88fa075758de.enc > out_flag
+      </code></pre></div></div>
+      <a href="img/india3.png"><img class="responsive-img" src="img/india3.png" width="600px"></div></a>
+      <p></p>woah! now lets open the output file</p>
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight">
+        <code>cat out_flag
+          private argument is not set, the private key will not be displayed, even if recovered.
+
+          [*] Testing key mykey.pub.
+          [*] Performing factordb attack on mykey.pub.
+          [*] Performing fibonacci_gcd attack on mykey.pub.
+          [*] Performing mersenne_primes attack on mykey.pub.
+          [*] Performing pastctfprimes attack on mykey.pub.
+          [*] Performing smallq attack on mykey.pub.
+          [*] Performing system_primes_gcd attack on mykey.pub.
+          [*] Performing SQUFOF attack on mykey.pub.
+          [!] Timeout.
+          [*] Performing boneh_durfee attack on mykey.pub.
+          Can't load boneh_durfee because sage binary is not installed
+          [*] Performing comfact_cn attack on mykey.pub.
+          [*] Performing cube_root attack on mykey.pub.
+          [*] Performing ecm2 attack on mykey.pub.
+          Can't load ecm2 because sage binary is not installed
+          [*] Performing fermat attack on mykey.pub.
+          [!] Timeout.
+          [*] Performing fermat_numbers_gcd attack on mykey.pub.
+          [!] Timeout.
+          [*] Performing mersenne_pm1_gcd attack on mykey.pub.
+          [*] Performing noveltyprimes attack on mykey.pub.
+          [*] Performing nsif attack on mykey.pub.
+          [!] This attack module is not implemented yet
+          [*] Performing partial_q attack on mykey.pub.
+          [*] Performing pisano_period attack on mykey.pub.
+          [*] Performing pollard_p_1 attack on mykey.pub.
+          [*] Performing primorial_pm1_gcd attack on mykey.pub.
+          [*] Performing qicheng attack on mykey.pub.
+          Can't load qicheng because sage binary is not installed
+          [*] Performing siqs attack on mykey.pub.
+          Can't load siqs because yafu binary is not installed
+          [*] Performing small_crt_exp attack on mykey.pub.
+          Can't load small_crt_exp because sage binary is not installed
+          [*] Performing wiener attack on mykey.pub.
+          [*] Performing wolframalpha attack on mykey.pub.
+          [*] Performing z3_solver attack on mykey.pub.
+          [!] Timeout.
+          [*] Performing binary_polinomial_factoring attack on mykey.pub.
+          Can't load binary_polinomial_factoring because sage binary is not installed
+          [*] Performing brent attack on mykey.pub.
+          1732753159 37285189857122350213372101306128285160636593458436107903211115061354050234511523503601477830875943631148911320967311020180089674202538504505310558941353263111778083910776692476084333171621444171342307709571715935650471716395902728327355764487444494311369984770725764984740102845774122175471388074381805239
+          [*] Attack success with brent method !
+          
+          Results for mykey.pub:
+          
+          Unciphered data :
+          HEX : 0x000256a6a1839a2ba9033afa022b0f1af2e7cdabebdd12e425f44ad586c9e32a92c509c61c8744cfa8c9bc534a46805430dc4040c93a5473e492600b66dce32b43138acab0b948fbb11d6bf5cb76a33a7a186dfea1849c9645d5a842acfcd192f0998ee86d75fb48979d10de006d756374667b656e74686f6b6b616172756e6e757d0a
+          INT (big endian) : 107619061672096965260752195304847021670699500834659744495500059174361955638589200309815410481276294779531855774384385301655624819645344302271432157971261356604563905781650871689313159837600288798312927036216796109246330110682954520670959165107214381462242775895372386038119045157544622257742667497589560812338442
+          INT (little endian) : 123587345875196200282410776475807803600728259625700251190822991906556081570446051043840038783105796895098528619420727596319842970714782747990507262100217349245108365028674595895431824859926997391316041849058244642683505311584016643083327074770671556067878248744661322389743018307015362637577610235905025685407007232
+          STR : b'\x00\x02V\xa6\xa1\x83\x9a+\xa9\x03:\xfa\x02+\x0f\x1a\xf2\xe7\xcd\xab\xeb\xdd\x12\xe4%\xf4J\xd5\x86\xc9\xe3*\x92\xc5\t\xc6\x1c\x87D\xcf\xa8\xc9\xbcSJF\x80T0\xdc@@\xc9:Ts\xe4\x92`\x0bf\xdc\xe3+C\x13\x8a\xca\xb0\xb9H\xfb\xb1\x1dk\xf5\xcbv\xa3:z\x18m\xfe\xa1\x84\x9c\x96E\xd5\xa8B\xac\xfc\xd1\x92\xf0\x99\x8e\xe8mu\xfbH\x97\x9d\x10\xde\x00muctf{enthokkaarunnu}\n'</code>
+    </pre></div></div>
+    <p>Or maybe</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat out_flag | grep muctf
+    </code></pre></div></div>
+    <a href="img/india4.png"><img class="responsive-img" src="img/india4.png" width="600px"></div></a>
+
+    <p>BOOM AND THERE IS THE FLAG</p>
+    </div>
+
+    
+
+    
+    
+    
+    <footer>
+<div class="footer b">
+<div class="row">
+<a href="#"><i class="fa fa-whatsapp"></i></a>
+<a href="#"><i class="fa fa-github"></i></a>
+<a href="tel:+91 9605917816"><i class="fa fa-phone"></i></a>
+<a href="mailto:janajithd@gmail.com"><i class="fa fa-envelope"></i></a>
+</div>
+
+<div class=" row cent">
+Copyright © Team Faux - All rights reserved
+</div>
+</div>
+</footer>
+
+
+
+
+  </main>
+
+</body>
+<!-- partial -->
+  <script  src="../../../assets/script.js"></script>
+
+</body>
+</html>

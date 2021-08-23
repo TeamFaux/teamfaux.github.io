@@ -1,0 +1,341 @@
+/* --- --------Google Fonts------------ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+*
+{
+   
+   cursor: url('https://www.pixelliongroup.com/img/cursor.png'), auto;
+}
+body{
+    font-family: 'Roboto Mono'; background-color: rgb(27, 25, 25); scroll-behavior: smooth;
+}
+a{    text-decoration: none;color:#9c9c9c;  }
+a:hover{cursor: pointer;text-decoration: none;color:#9c9c9c;}
+
+.b{    border:1px solid red;    }
+.or{    color: rgb(175, 95, 41);    }
+.txt-sha{  text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);}
+.h{
+    height:400px;
+}
+
+.hero-title{    font-size: 3em; font-family: 'Roboto Mono';font-weight: 100; }
+
+.dashed
+{
+    border: 1px dashed #222;
+}
+.land
+{
+    height:100vh;
+    width:100%;
+    background-color: #cfcccc;
+    color:#333;
+}
+.land-cen
+{
+    
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.head-img{ height:40vh;width:35vw;}
+
+.type{
+    font-family: 'Special Elite', cursive;
+}
+
+
+.febut
+{
+  background-color: transparent;
+  border: 1px solid #333;
+  padding:10px;
+  border-radius: 10px;
+}
+.febut:hover{background-color: #333;color:#eee;transition: all 0.5s ease-in-out;}
+.febutt:hover{transform: scale(1.10);transition: all 0.5s ease-in-out;color:#b98850}
+
+.febutt
+{
+  background-color:transparent;
+  border: 1px solid #333;
+  color: rgb(180, 178, 178);
+  padding:10px 20px;
+  border-radius: 10px;
+
+}
+.binary
+{
+    height:40vh;
+    padding:10px;
+    
+    overflow: hidden;
+    position: absolute;
+    bottom: 10px;
+    
+}
+.blink
+{
+  animation:blink 1.2s infinite;
+}
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
+
+
+.li {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #272727;
+    border-radius: 39px;
+    padding: 6px 15px;
+  }
+.cust
+{
+    padding: 0%;
+}
+
+.my-card {
+  display: flex;
+  padding: 20px;
+ align-items: center;
+ justify-content: center;
+}
+
+
+
+  @media only screen and (max-width: 999px) {
+    .my-card {
+        display: block;
+      
+    }
+  }
+
+
+  .no{
+
+    padding-bottom: 20px;
+  }
+
+  @media(min-width: 900px)
+  {
+  .col-2
+  {
+  display:none;
+  }
+  }
+
+
+  @media (max-width: 900px) {
+    .no {
+      display: none;
+    }
+  }
+
+  .standard-btn-coloured {
+    text-decoration:none;
+    background:#2b2b2b;
+    border: 2px solid #505050;
+    padding:7px 20px 7px 20px;
+    border-radius:30px;
+    color:#FFFFFF;
+    margin:5px;
+  }
+
+
+/* new */
+.dashed-b
+{
+
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='1' stroke-dasharray='20' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+}
+.thumb-img
+{
+  width:20vw;
+  height:auto;
+  
+  
+}
+.snip
+{
+  width:100%;
+  height:auto;
+  padding: 5vw;
+}
+.cv-code {
+  content-visibility: auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #1f1e1e;
+  width: 500px;
+  max-width: 95%;
+ 
+}
+.cv-code-header {
+  display: flex;
+  align-items: center;
+  background: #393d3e;
+  color: #eee;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 0.5rem 0.5rem 0 0;
+  position: relative;
+  font-family: "JetBrains Mono", monospace;
+}
+.cv-code-buttons {
+  margin-right: 1rem;
+  display: flex;
+  gap: 6px;
+}
+.cv-code-buttons .fake-button[data-close] {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #f77669;
+}
+.cv-code-buttons .fake-button[data-minify] {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #ffcb6b;
+}
+.cv-code-buttons .fake-button[data-expand] {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #c3e88d;
+}
+.cv-code-title {
+  margin: 0 auto;
+  display: block;
+}
+.cv-code .content {
+  color: white;
+  padding: 1rem;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size: 0.8rem;
+}
+.cv-code .content .instruction {
+  display: block;
+  padding: 0 0 7px 0;
+}
+.cv-code .content .user {
+  color: #6db928;
+}
+.cv-code .content .path, .cv-code .content .command {
+  color: #6fa5cd;
+}
+
+
+
+@media (max-width: 900px) {
+ .mob {
+   display: none;
+ }
+}
+
+
+.standard-btn-coloured {
+ text-decoration:none;
+ background:#00acec;
+ border: 2px solid #00ACEC;
+ padding:10px 20px 10px 20px;
+ border-radius:2px;
+ color:#FFFFFF;
+ margin:5px;
+} 
+
+/* aboutus */
+.conab
+{
+  background-color: #cfcccc;
+  height: 500px;
+}
+
+/* Sidenav */
+.hambur
+{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding : 0 0.5em;
+  padding-top: 0.5em;
+  color: #000000;
+  font-size:40px;
+  cursor: pointer;
+  
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+@media screen and (min-width: 800px) {
+  .rb{
+    margin-left: 200px;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+  .row{
+    background-color: #161616;
+}
+
+
+
+
+.bg{
+  background-image: url("assets/img/square full.png");}
+}
