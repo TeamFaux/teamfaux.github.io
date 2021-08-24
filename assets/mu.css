@@ -1,7 +1,8 @@
-body{margin: 0;overflow-x: hidden;}
+
 .main
 {
     background-color: #e7e7e7;
+    margin: 0;
 }
 .files
 {

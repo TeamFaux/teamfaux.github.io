@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <!-- ADDED HITS Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -16,18 +16,15 @@
     
     <link rel="stylesheet" href="assets/style.css"/>
     <link rel="stylesheet" href="assets/mob.css"/>
-<<<<<<< HEAD
     
+    <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/visits?callback=hits%22%3E"></script>
+        <script>
+            function hits(response) {
+            document.getElementById('visits').innerText = response.value;
+            }
+        </script>
 
 
-=======
-    <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/visits?callback=hits"></script>
-    <script>
-        function hits(response) {
-        document.getElementById('visits').innerText = response.value;
-        }
-    </script>
->>>>>>> 8db9e4812329a105a3437c839137ad922a4f60b5
     </head>
 
    <body>
@@ -80,7 +77,6 @@
                         <ul class="list-unstyled">
                             <li id="day"> </li>
                             <li>STATUS <i class="fas fa-globe-asia"></i>   :  Active</li>
-                            <li><span id="visits"></span> visits.</li>
                         </ul>
                     </div>
                 </div>
