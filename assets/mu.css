@@ -1,0 +1,21 @@
+body{margin: 0;overflow-x: hidden;}
+.main
+{
+    background-color: #e7e7e7;
+}
+.files
+{
+    color:rgb(153, 196, 196);
+}
+.he{padding-bottom: 1em;}
+
+img {
+    max-width: 80vw;
+    max-height: auto; }
+
+.scode
+{
+    background-color: black;
+    
+}
+pre{color:white}
