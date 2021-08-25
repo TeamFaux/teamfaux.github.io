@@ -13,10 +13,35 @@
 img {
     max-width: 80vw;
     max-height: auto; }
+.imggal
+{
+    width:300px;
+    height:400px;
+}    
 
 .scode
 {
     background-color: black;
     
+    
 }
 pre{color:white}
+
+
+.leftt
+{
+     
+    -webkit-background-size: contain;
+    background-size: contain;
+    height: 75vh;
+    width:50vw;  
+    
+}
+.rightt
+{
+    width:50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
