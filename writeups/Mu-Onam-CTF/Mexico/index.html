@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CTF Writeup - Mexico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Rubik+Mono+One&display=swap" rel="stylesheet">
+  
+  
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="../../../assets/mu.css"/>
+  <link rel="stylesheet" href="../../../assets/style.css"/>
+  <link rel="stylesheet" href="../../../assets/mob.css"/>
+  <!-- <link rel="stylesheet" href="../../../assets/book.css"/> -->
+
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+  <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/test?callback=hits"></script>  <!--EDIT THISSS ONLY GIVE CORRECT VALUE AT THE END(test)-->
+
+        <script>
+            function hits(response) {
+            document.getElementById('visits').innerText = response.value;
+            }
+        </script>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+ 
+  <div class="main">
+    
+    <div class="d-flex   mob1 pb-1">
+        
+      <div class="px-5 text-white-50   ">
+          <div class="d-flex justify-content-between ">
+            <img src="../../../assets/img/square short.png" class="thumb-img mhide">
+            <div class="flex-grow-1  text-black-50 pb-5 " >
+              <div class="text-left  w-100 hero-title px-3  pt-5 "><b>CTF Writeups - Mexico</b> </div>
+                <div class="mx-4" >
+
+                  <ul class="list-unstyled d-inline">
+                    <a href=""><li class="d-inline-block"><i class="fas fa-user"></i> 0xar11</li></a>
+                    <a href=""><li class="d-inline-block"><i class="fas fa-calendar-week"></i> 21 August 2021</li></a>
+                    <a href=""><li class="d-inline-block"><i class="fas fa-folder"> </i> Crypto</li></a>
+                    <i class="far fa-eye px-2"></i></i><span id="visits"></span>
+                  </ul>
+
+                </div>
+            </div> 
+              
+          </div>
+      </div>
+    </div>
+  
+
+    <!-- content -->
+    <div class="ml-5 ">
+      <div>
+        <p class="cont text"><br>
+          <b>Points: 100</b><br>
+          <b>Description:</b> Beaty is never skin deep
+        </p>
+      </div>
+
+      
+      <div class="py-4">
+        <h1>Files and Hints</h1>
+        <a href="files/ctf_1bc094c286728c44b88aab5582d220cf.zip">
+          <div class="files">ctf_1bc094c286728c44b88aab5582d220cf.zip</div>
+        </a>
+        <p class="text">Thanks to the cordinators for giving <code>0 hints</code> so far.</p>
+      </div>
+
+      
+      <div class=" py-4">
+        <h1>Recon</h1>
+        <p>The challenge had a file opening we get.</p>
+        <a href="img/india1.png" target="_blank"><img  src="img/india1.png" ></a>
+        <p class="py-2">Searching through the web page we found a suspicious file in the contact section.</p>
+        <a href="img/india2-1.png" target="_blank"><img  src="img/india2-1.png" ></a>
+      </div>
+
+      <p>Dwnloading the file : <a href="files/mykey.pub" class="files">
+        <div class="files"><b>mykey.pub</b></div> </a><br>
+        By taking a look into the file we can understand that this is a RSA public key.
+      </p>
+
+      
+      <div>
+        <h2 class="he">Finding the Flag</h2>
+        Fortunatley for us there is tool in github called <b><a href="https://github.com/Ganapati/RsaCtfTool" class="files">RsaCtfTool</a> </b>
+      </div>
+
+      <div class="py-1">
+        <p>Cloning the github repo:</p>      
+        <code>git clone https://github.com/Ganapati/RsaCtfTool.git<br>cd RsaCtfTool</code>
+      </div>
+
+      <div>
+        <p>Trying to crack the file using RsaCtfTool:</p>
+        <code>./RsaCtfTool.py --publickey mykey.pub --uncipherfile flag_abf168c3575c05707c5d88fa075758de.enc > out_flag  </code>
+      </div>
+         
+      <div>
+        <a href="img/india3.png " target="_blank"><img class="py-2" src="img/india3.png" ></a>
+        <p>Woah! Now lets open the output file</p>
+      </div>
+
+      <div class="scode ">
+        <pre class="text-white-100">
+          cat out_flag
+          private argument is not set, the private key will not be displayed, even if recovered.
+
+          [*] Testing key mykey.pub.
+          [*] Performing factordb attack on mykey.pub.
+          [*] Performing fibonacci_gcd attack on mykey.pub.
+          [*] Performing mersenne_primes attack on mykey.pub.
+          [*] Performing pastctfprimes attack on mykey.pub.
+          [*] Performing smallq attack on mykey.pub.
+          [*] Performing system_primes_gcd attack on mykey.pub.
+          [*] Performing SQUFOF attack on mykey.pub.
+          [!] Timeout.
+          [*] Performing boneh_durfee attack on mykey.pub.
+          Can't load boneh_durfee because sage binary is not installed
+          [*] Performing comfact_cn attack on mykey.pub.
+          [*] Performing cube_root attack on mykey.pub.
+          [*] Performing ecm2 attack on mykey.pub.
+          Can't load ecm2 because sage binary is not installed
+          [*] Performing fermat attack on mykey.pub.
+          [!] Timeout.
+          [*] Performing fermat_numbers_gcd attack on mykey.pub.
+          [!] Timeout.
+          [*] Performing mersenne_pm1_gcd attack on mykey.pub.
+          [*] Performing noveltyprimes attack on mykey.pub.
+          [*] Performing nsif attack on mykey.pub.
+          [!] This attack module is not implemented yet
+          [*] Performing partial_q attack on mykey.pub.
+          [*] Performing pisano_period attack on mykey.pub.
+          [*] Performing pollard_p_1 attack on mykey.pub.
+          [*] Performing primorial_pm1_gcd attack on mykey.pub.
+          [*] Performing qicheng attack on mykey.pub.
+          Can't load qicheng because sage binary is not installed
+          [*] Performing siqs attack on mykey.pub.
+          Can't load siqs because yafu binary is not installed
+          [*] Performing small_crt_exp attack on mykey.pub.
+          Can't load small_crt_exp because sage binary is not installed
+          [*] Performing wiener attack on mykey.pub.
+          [*] Performing wolframalpha attack on mykey.pub.
+          [*] Performing z3_solver attack on mykey.pub.
+          [!] Timeout.
+          [*] Performing binary_polinomial_factoring attack on mykey.pub.
+          Can't load binary_polinomial_factoring because sage binary is not installed
+          [*] Performing brent attack on mykey.pub.
+          1732753159 37285189857122350213372101306128285160636593458436107903211115061354050234511523503601477830875943631148911320967311020180089674202538504505310558941353263111778083910776692476084333171621444171342307709571715935650471716395902728327355764487444494311369984770725764984740102845774122175471388074381805239
+          [*] Attack success with brent method !
+          
+          Results for mykey.pub:
+          
+          Unciphered data :
+          HEX : 0x000256a6a1839a2ba9033afa022b0f1af2e7cdabebdd12e425f44ad586c9e32a92c509c61c8744cfa8c9bc534a46805430dc4040c93a5473e492600b66dce32b43138acab0b948fbb11d6bf5cb76a33a7a186dfea1849c9645d5a842acfcd192f0998ee86d75fb48979d10de006d756374667b656e74686f6b6b616172756e6e757d0a
+          INT (big endian) : 107619061672096965260752195304847021670699500834659744495500059174361955638589200309815410481276294779531855774384385301655624819645344302271432157971261356604563905781650871689313159837600288798312927036216796109246330110682954520670959165107214381462242775895372386038119045157544622257742667497589560812338442
+          INT (little endian) : 123587345875196200282410776475807803600728259625700251190822991906556081570446051043840038783105796895098528619420727596319842970714782747990507262100217349245108365028674595895431824859926997391316041849058244642683505311584016643083327074770671556067878248744661322389743018307015362637577610235905025685407007232
+          STR : b'\x00\x02V\xa6\xa1\x83\x9a+\xa9\x03:\xfa\x02+\x0f\x1a\xf2\xe7\xcd\xab\xeb\xdd\x12\xe4%\xf4J\xd5\x86\xc9\xe3*\x92\xc5\t\xc6\x1c\x87D\xcf\xa8\xc9\xbcSJF\x80T0\xdc@@\xc9:Ts\xe4\x92`\x0bf\xdc\xe3+C\x13\x8a\xca\xb0\xb9H\xfb\xb1\x1dk\xf5\xcbv\xa3:z\x18m\xfe\xa1\x84\x9c\x96E\xd5\xa8B\xac\xfc\xd1\x92\xf0\x99\x8e\xe8mu\xfbH\x97\x9d\x10\xde\x00muctf{enthokkaarunnu}\n'</code>
+      
+        </pre>
+        
+      </div>
+      <div class="py-2">
+          <p>Or maybe</p>
+          <code>
+            cat out_flag | grep muctf
+          </code>
+          
+      </div>
+      
+      <div class="py-2">
+        <a href="img/india4.png " target="_blank"><img class="py-2" src="img/india4.png" ></a>
+        <p>BOOM AND THERE IS THE FLAG !</p>
+        <code>muctf{enthokkaarunnu}</code>
+      </div>
+      
+    </div> 
+ 
+    <!-- footer  -->
+    
+    <div class=" scode">
+      <div class="d-flex justify-content-center  ">
+        
+        <a href="https://github.com/TeamFaux"><i class="fab fa-github p-3"></i></a>
+        <a href="tel:+91 9605917816"><i class="fa fa-phone p-3"></i></a>
+        <a href="mailto:0xteamfaux@gmail.com"><i class="fa fa-envelope p-3"></i></a>
+      </div>
+      <div class="text-center py-2 ">
+        Copyright © Team Faux - All rights reserved
+      </div>
+
+  </div>
+
+
+
+
+
+  </main>
+
+  
+
+
+
+</body>
+</html>
