@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
 
-  <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/india?callback=hits"></script>
+  <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/china--mode?callback=hits"></script>
   <script>
     function hits(response) {
       document.getElementById('visits').innerText = response.value;
@@ -51,7 +51,7 @@
                     <li class="d-inline-block"><i class="fas fa-user"></i>v4zha</li>
                   </a>
                   <a href="">
-                    <li class="d-inline-block"><i class="fas fa-calendar-week"></i> 21 August 2021</li>
+                    <li class="d-inline-block"><i class="fas fa-calendar-week"></i> 23 August 2021</li>
                   </a>
                   <a href="">
                     <li class="d-inline-block"><i class="fas fa-folder"> </i>Forensic</li>
@@ -80,19 +80,16 @@
         <div class=" py-4">
           <h1></h1>
           <p>Download the image and try running binwalk</p>
-          <div class="scode ">
-            <pre class="text-white-100">
-          binwalk --dd=".*" Los-Angeles-1925_c39606a7a3e660339a280bdfb1b42cbb.jpg
-        </pre>
-          </div>
+          <code>binwalk --dd=".*" Los-Angeles-1925_c39606a7a3e660339a280bdfb1b42cbb.jpg</code><br><br>
+          
           <a href="img/china0.png" target="_blank"><img src="img/china0.png"></a>
-          <p class="py-2">View the extracted files</p>
+          <p class="py-2">Viewing the extracted files</p>
           <a href="img/china1.png" target="_blank"><img src="img/china1.png"></a>
         </div>
         <div>
           <h2 class="he">Examining the files</h2>
-          Try extracting the zip file and we find a folder named iamhere.
-          <a href="img/china2.png" target="_blank"><img src="img/china2.png"></a>
+          Try extracting the zip file and we find a folder named iamhere. <br><br>
+          <a href="img/china2.png" target="_blank"><img src="img/china2.png"></a><br><br>
         </div>
         <div>
           <p>We find that this folder also contains many images and some are hidden.Listing only the hidden files
@@ -123,10 +120,10 @@
         </div>
         <div>
           <a href="img/china6.png " target="_blank"><img class="py-2" src="img/china6.png"></a>
-          <p>And we get the flag :)</p>
+          <p>And we got the flag :)</p>
           <div>
             <code>muctf{mhgfhbdcrkqgkiujdxurtjvftofqcntfuyjycdaesdmiiwtuhrwfkpldxmutbfwzngoiyntlqlcgcecbrbgxoznagzxcjjpnrtpmhomardkehtnvzfjctlovqhycpgkewxvvwpnwrlijgmeimpkijboqhtikkhdiebliohoukjbwzkdyasobdgvugyspceujqkodaowen}</code>
-          </div>
+          </div><br><br>
         </div>
       </div>
 
