@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/style.css"/>
     <link rel="stylesheet" href="assets/mob.css"/>
     
-    <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/visits?callback=hits%22%3E"></script>
+    <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/visits?callback=hits"></script>
         <script>
             function hits(response) {
             document.getElementById('visits').innerText = response.value;
@@ -77,6 +77,7 @@
                         <ul class="list-unstyled">
                             <li id="day"> </li>
                             <li>STATUS <i class="fas fa-globe-asia"></i>   :  Active</li>
+                            <li><span id="visits"></span> visits.</li>
                         </ul>
                     </div>
                 </div>
@@ -195,10 +196,14 @@
 
     <!-- foot -->
 
-    <div class="text-center p-3 text-white-50" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-white-50" href="">TEAM FAUX</a>
-      </div>
+    <div class="d-flex justify-content-center  ">
+        
+        <a href="https://github.com/TeamFaux"><i class="fab fa-github p-3"></i></a>
+        <a href="tel:+91 9605917816"><i class="fa fa-phone p-3"></i></a>
+        <a href="mailto:0xteamfaux@gmail.com"><i class="fa fa-envelope p-3"></i></a>
+    </div>
+    <div class="text-center text-light py-2 ">        Copyright © Team Faux - All rights reserved    </div>
+    
 
     <script src="assets/day.js"></script>
    </body> 
