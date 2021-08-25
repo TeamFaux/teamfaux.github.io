@@ -5,12 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-
+*
+{
+   
+   cursor: url('https://www.pixelliongroup.com/img/cursor.png'), auto;
+}
 body{
     font-family: 'Roboto Mono'; background-color: rgb(27, 25, 25); scroll-behavior: smooth;
 }
 a{    text-decoration: none;color:#9c9c9c;  }
-a:hover{cursor: pointer ;text-decoration: none;color:#9c9c9c;}
+a:hover{cursor: pointer;text-decoration: none;color:#9c9c9c;}
 
 .b{    border:1px solid red;    }
 .or{    color: rgb(175, 95, 41);    }
@@ -161,7 +165,7 @@ a:hover{cursor: pointer ;text-decoration: none;color:#9c9c9c;}
 }
 .thumb-img
 {
-  width:15vw;
+  width:20vw;
   height:auto;
   
   
@@ -329,11 +333,7 @@ a:hover{cursor: pointer ;text-decoration: none;color:#9c9c9c;}
     background-color: #161616;
 }
 
-img{
-  width: 100%;
-    height: 300px;
-    background-size: 100% 100%;
-}
+
 
 
 .bg{
