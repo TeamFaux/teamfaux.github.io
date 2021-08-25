@@ -1,0 +1,343 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CTF Writeup - Quiz</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    
+  <link rel="stylesheet" href="../../../assets/mu.css"/>
+  <link rel="stylesheet" href="../../../assets/mob.css"/>
+    <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/quiz?callback=hits"></script>
+    <script>
+        function hits(response) {
+        document.getElementById('visits').innerText = response.value;
+        }
+    </script>
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      .thumb-img
+{
+  width:15vw;
+  height:auto;
+  
+  
+}
+
+.hero-title{    font-size: 3em; font-family: 'Roboto Mono';font-weight: 100; }
+a{    text-decoration: none;color:#9c9c9c;  }
+a:hover{cursor: pointer ;text-decoration: none;color:#9c9c9c;}
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        
+      }
+      @media screen and (max-width: 600px){
+        img{
+          max-width: 100%;
+    height: auto;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+
+<main>
+  <div class="d-flex mob1 pb-1">
+        
+    <div class="px-5 text-white-50   ">
+        <div class="d-flex justify-content-between ">
+          <img src="../../../assets/img/square short.png" class="thumb-img mhide">
+          <div class="flex-grow-1  text-black-50 pb-5 " >
+            <div class="text-left  w-100 hero-title px-3  pt-5 "><b>CTF Writeups - Quiz Answers</b> </div>
+              <div class="mx-4" >
+
+                <ul class="list-unstyled d-inline">
+                  <a href=""><li class="d-inline-block"><i class="fas fa-user"></i> 0xar11</li></a>
+                  <a href=""><li class="d-inline-block"><i class="fas fa-calendar-week"></i> 25 August 2021</li></a>
+                  <a href=""><li class="d-inline-block"><i class="fas fa-folder"> </i> Quiz</li></a>
+                  <i class="far fa-eye px-2"></i></i><span id="visits"></span>
+                </ul>
+
+              </div>
+          </div> 
+            
+        </div>
+    </div>
+  </div>
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/malysia.jpg" alt="">
+            <div class="card-body">
+            <center><h4>Malaysia</h4>
+              <p class="card-text">This is a wider card with supporting text bele bit longer.</p>
+              <p class="card-text">Flag: <code>muctf{sdad}</code>.</p></center>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <!--<div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="img/US.png" alt="">
+                <div class="card-body">
+                <center><h4>United States</h4>
+                  <p class="card-text">Who am I ?</p>
+                  <p class="card-text">Flag: <code>#####</code>.</p></center>
+    
+                  <div class="d-flex justify-content-between align-items-center">
+                    <!--<div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="img/myanmar.png" alt="">
+                  <div class="card-body">
+                  <center><h4>Myanmar</h4>
+                    <p class="card-text">Buried alive</p>
+                    <p class="card-text">Flag: <code>Harry Houdini</code>.</p></center>
+      
+                    <div class="d-flex justify-content-between align-items-center">
+                      <!--<div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="img/senegal.png" alt="">
+                    <div class="card-body">
+                    <center><h4>Senegal</h4>
+                      <p class="card-text">Opps...Not Again ...</p>
+                      <p class="card-text">Flag: <code>Britney Spears</code>.</p></center>
+        
+                      <div class="d-flex justify-content-between align-items-center">
+                        <!--<div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img src="img/nigeria.png" alt="">
+                      <div class="card-body">
+                      <center><h4>Nigeria</h4>
+                        <p class="card-text">Pattern World</p>
+                        <p class="card-text">Flag: <code>Fibonacci</code>.</p></center>
+          
+                        <div class="d-flex justify-content-between align-items-center">
+                          <!--<div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <img src="img/paraguay.png" alt="">
+                        <div class="card-body">
+                        <center><h4>Paraguay</h4>
+                          <p class="card-text">The high speed bovine had a smash with gravity , when had a crush</p>
+                          <p class="card-text">Flag: <code>Sandra Bullock</code>.</p></center>
+            
+                          <div class="d-flex justify-content-between align-items-center">
+                            <!--<div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-sm">
+                          <img src="img/mali.png" alt="">
+                          <div class="card-body">
+                          <center><h4>Mali</h4>
+                            <p class="card-text">Only Connect!</p>
+                            <p class="card-text">Flag: <code>Breaking Bad</code>.</p></center>
+              
+                            <div class="d-flex justify-content-between align-items-center">
+                              <!--<div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card shadow-sm">
+                            <img src="img/Indonasia.png" alt="">
+                            <div class="card-body">
+                            <center><h4>Indonesia</h4>
+                              <p class="card-text">Beware of July and August</p>
+                              <p class="card-text">Flag: <code>Caesar</code>.</p></center>
+                
+                              <div class="d-flex justify-content-between align-items-center">
+                                <!--<div class="btn-group">
+                                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card shadow-sm">
+                              <img src="img/portugal.png" alt="">
+                              <div class="card-body">
+                              <center><h4>Portugal</h4>
+                                <p class="card-text">Lights Action Camera</p>
+                                <p class="card-text">Flag: <code>Fifty Shades of Grey</code>.</p></center>
+                  
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <!--<div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="card shadow-sm">
+                                <img src="img/colombia.png" alt="">
+                                <div class="card-body">
+                                <center><h4>Colombia</h4>
+                                  <p class="card-text">never give up</p>
+                                  <p class="card-text">Flag: <code>Abraham Lincoln</code>.</p></center>
+                    
+                                  <div class="d-flex justify-content-between align-items-center">
+                                    <!--<div class="btn-group">
+                                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="card shadow-sm">
+                                  <img src="img/thailand.png" alt="">
+                                  <div class="card-body">
+                                  <center><h4>Thailand</h4>
+                                    <p class="card-text">When the fruits of loot fed the lot..</p>
+                                    <p class="card-text">Flag: <code>Robinhood</code>.</p></center>
+                      
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <!--<div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="card shadow-sm">
+                                    <img src="img/turkimisthan.png" alt="">
+                                    <div class="card-body">
+                                    <center><h4>Turkmenistan</h4>
+                                      <p class="card-text">Have yo seen the 43 Quintllion selves of me ?</p>
+                                      <p class="card-text">Flag: <code>rubik's cube</code>.</p></center>
+                        
+                                      <div class="d-flex justify-content-between align-items-center">
+                                        <!--<div class="btn-group">
+                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow-sm">
+                                      <img src="img/kenya.png" alt="">
+                                      <div class="card-body">
+                                      <center><h4>Kenya</h4>
+                                        <p class="card-text">The Maverick who leaves his post,Has all the power ath his Heels.</p>
+                                        <p class="card-text">Flag: <code>Higuita</code>.</p></center>
+                          
+                                        <div class="d-flex justify-content-between align-items-center">
+                                          <!--<div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="card shadow-sm">
+                                        <img src="img/angola.png" alt="">
+                                        <div class="card-body">
+                                        <center><h4>Angola</h4>
+                                          <p class="card-text">My Bengali Companion</p>
+                                          <p class="card-text">Flag: <code>rubik's cube</code>.</p></center>
+                            
+                                          <div class="d-flex justify-content-between align-items-center">
+                                            <!--<div class="btn-group">
+                                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                     
+              
+        </div>
+    </div>       
+    
+  </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+      <!-- --  footer -- -->
+    <div class="scode text-light">
+      <div class="d-flex justify-content-center  ">
+        <a href="https://github.com/TeamFaux"><i class="fab fa-github p-3"></i></a>
+        <a href="tel:+91 9605917816"><i class="fa fa-phone p-3"></i></a>
+        <a href="mailto:0xteamfaux@gmail.com"><i class="fa fa-envelope p-3"></i></a>
+      </div>
+
+      <div class="text-center py-2 ">
+        Copyright © Team Faux - All rights reserved
+      </div>
+    </div>
+  </body>
+</html>
