@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CTF Writeup - Finland</title>
+  <title>CTF Writeup - Kazakhstan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Rubik+Mono+One&display=swap" rel="stylesheet">
@@ -23,11 +23,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
 
-    <!--change the value here
-    eg:-   <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/%%name%of_writeup%%?callback=hits"></script>
-      TO 
-    -->
-  <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/Finland?callback=hits"></script>
+  <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/Kazakhstan?callback=hits"></script>  <!--EDIT THISSS ONLY GIVE CORRECT VALUE AT THE END(test)-->
+
         <script>
             function hits(response) {
             document.getElementById('visits').innerText = response.value;
@@ -38,22 +35,23 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<body>
  
   <div class="main">
     
-     <div class="d-flex   mob1 pb-1">
+    <div class="d-flex   mob1 pb-1">
         
       <div class="px-5 text-white-50   ">
           <div class="d-flex justify-content-between ">
             <img src="../../../assets/img/square short.png" class="thumb-img mhide">
             <div class="flex-grow-1  text-black-50 pb-5 " >
-              <div class="text-left  w-100 hero-title px-3  pt-5 "><b>CTF Writeups - Finland</b> </div>
+              <div class="text-left  w-100 hero-title px-3  pt-5 "><b>CTF Writeups - Kazakhstan</b> </div>
                 <div class="mx-4" >
 
                   <ul class="list-unstyled d-inline">
                     <a href=""><li class="d-inline-block"><i class="fas fa-user"></i> MQ</li></a>
-                    <a href=""><li class="d-inline-block"><i class="fas fa-calendar-week"></i> 26 August 2021</li></a>
-                    <a href=""><li class="d-inline-block"><i class="fas fa-folder"> </i> Crypto</li></a>
+                    <a href=""><li class="d-inline-block"><i class="fas fa-calendar-week"></i> 27 August 2021</li></a>
+                    <a href=""><li class="d-inline-block"><i class="fas fa-folder"> </i> Forensic</li></a>
                     <i class="far fa-eye px-2"></i></i><span id="visits"></span>
                   </ul>
 
@@ -70,69 +68,45 @@
       <div>
         <p class="cont text"><br>
           <b>Points: 150</b><br>
-          <b>Description:</b> Consider the format: "< message > + < random number >". For example: "hello+453" has its SHA256 hash as:<br>
-          <br>
-            24ea0ded1e01de0861bfaaace9bbfb48922f96f4e023ca637ee5cb1b29e9db7f<br>
-            <br>
-            Where hello is message, plus (+) is the delimiter & 453 is a random number. <br>
-             <br>
-            Find the smallest positive integer such that the SHA256 hash of the message "catch-me-if-you-can" represented in the given format has eight zeros as its first 8 characters. <br>
-            <br>
-            Note:<br>
-                1. The hash presented for "hello+453" has "24e" as the first 3 characters.<br>
-                2. There are no quotes in the format, they are just to highlight the strings.<br>
-                <br>
-            Example:<br>
-            <br>
-            With the random number 453, the hash of the given message: "catch-me-if-you-can" (i.e. catch-me-if-you-can+453) in the specified format is: <br>
-            <br>
-            a84f4f32f3ba9b2f1e402e248f9d27239875a752114405b94e6e570a29c1073e
+          <b>Description:</b> He did something he shouldn't have. We arrested him but need proof !!!
         </p>
       </div>
 
       
       <div class="py-4">
-        <h1>Links and Hints</h1>
-        <p class="text"> :) </p>
+        <h1>Files and Hints</h1>
+        <a href="https://mega.nz/file/2rAEyRCY#jUT_52h4GgW7_SHihVNTFyEDEGcUpv5Z0akE96il4I4" target="
+        _blank">
+          7zip file [https://mega.nz/file/2rAEyRCY#jUT_52h4GgW7_SHihVNTFyEDEGcUpv5Z0akE96il4I4]
+        </a>
       </div>
 
       
-      <div class=" py-4">
+      <div>
         <h1>Recon</h1>
-        <p>From the question, we can understand that we need to find the smallest positive integer such that the SHA256 hash of the message "catch-me-if-you-can" represented in the given format has eight zeros as its first 8 characters.<br>
-        </p>
-      </div>
+        <p>The challenge had a  7zip file of size 473.8 MiB.</p>
+        <a href="img/Kazakhstan0.png" target="_blank"><img class="py-2"src="img/Kazakhstan0.png" ></a>
+        <p class="py-1" style="margin-bottom:0px;">By unzipping it we get a 2.0 GiB row file.</p>
+        <a href="img/Kazakhstan1.png" target="_blank"><img class="py-2"src="img/Kazakhstan1.png" ></a>
 
+      </div>
+      
       <div>
         <h2 class="he">Finding the Flag</h2>
-         <p>So we wrote a python script while add number form 0 to infinity and check if the hash has 8 zeros as its first 8 characters.</p>
-      </div>
-
-      <div class="scode">
-        <pre class="text-white-100">
-        import hashlib
+        <p class="py-1">As usual, we just tried strings because it's a file. and we found many sentences are passing.</p>
+        <code>strings -10 file.raw</code>
+        <script id="asciicast-yOo55tjYAyblNBhREoHxP0o8k" src="https://asciinema.org/a/yOo55tjYAyblNBhREoHxP0o8k.js" async></script>
+        <p class="py-1" style="margin-bottom:0px;">oh it huge lets try luck 👀. so tried a filtering with grep to check it contain "muctf{" which is the starting formate of our ctf</p>
+        <code>strings -10 file.raw | grep "muctf{"</code>
+        <p class="pb-1" style="margin-bottom:0px;">BOOM BOOM THE FLAG 😂😂!</p>
+        <a href="img/Kazakhstan2.png" target="_blank"><img class="py-2"src="img/Kazakhstan2.png" ></a>
         
-        string = 'catch-me-if-you-can+'
-        number = 0
-        
-        while True:
-            number = number + 1
-            hash =  hashlib.sha256(f'{string}{number}'.encode()).hexdigest()
-            if '00000000'in hash
-                print(number)
-                break
-        </pre>
-        <a href="/writeups/Mu-Onam-CTF/Finland/files/code.py">Download Code</a>
-        </div>
-
-      <div class="py-2">
-        <p>After burning GPU for a decade we found it😢...!</p>
-      <a href="img/Finland0.png" target="_blank"><img class="py-2" src="img/Finland0.png" ></a>
         <h2 >Flag</h2>
-        <code>muctf{catch-me-if-you-can+631550315}</code><br><br><br>
-        </div>
-    </div>
+        <p class="py-2"><code>muctf{MemdUmPIIsHeREee}</code></p>
 
+        <h2 >PRO TIP : strings everything</h2>
+      </div>
+      
     </div> 
  
     <!-- footer  -->
@@ -147,7 +121,18 @@
       <div class="text-center py-2 ">
         Copyright © Team Faux - All rights reserved
       </div>
+
   </div>
+
+
+
+
+
+  </main>
+
+  
+
+
 
 </body>
 </html>
