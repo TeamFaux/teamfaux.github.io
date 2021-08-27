@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CTF Writeup - Kazakhstan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Rubik+Mono+One&display=swap" rel="stylesheet">
+  
+  
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="../../../assets/mu.css"/>
+  <link rel="stylesheet" href="../../../assets/style.css"/>
+  <link rel="stylesheet" href="../../../assets/mob.css"/>
+  <!-- <link rel="stylesheet" href="../../../assets/book.css"/> -->
+
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+  <script async src="https://api.countapi.xyz/hit/teamfaux.github.io/Kazakhstan?callback=hits"></script>  <!--EDIT THISSS ONLY GIVE CORRECT VALUE AT THE END(test)-->
+
+        <script>
+            function hits(response) {
+            document.getElementById('visits').innerText = response.value;
+            }
+        </script>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+ 
+  <div class="main">
+    
+    <div class="d-flex   mob1 pb-1">
+        
+      <div class="px-5 text-white-50   ">
+          <div class="d-flex justify-content-between ">
+            <img src="../../../assets/img/square short.png" class="thumb-img mhide">
+            <div class="flex-grow-1  text-black-50 pb-5 " >
+              <div class="text-left  w-100 hero-title px-3  pt-5 "><b>CTF Writeups - Kazakhstan</b> </div>
+                <div class="mx-4" >
+
+                  <ul class="list-unstyled d-inline">
+                    <a href=""><li class="d-inline-block"><i class="fas fa-user"></i> MQ</li></a>
+                    <a href=""><li class="d-inline-block"><i class="fas fa-calendar-week"></i> 27 August 2021</li></a>
+                    <a href=""><li class="d-inline-block"><i class="fas fa-folder"> </i> Forensic</li></a>
+                    <i class="far fa-eye px-2"></i></i><span id="visits"></span>
+                  </ul>
+
+                </div>
+            </div> 
+              
+          </div>
+      </div>
+    </div>
+  
+
+    <!-- content -->
+    <div class="ml-5 ">
+      <div>
+        <p class="cont text"><br>
+          <b>Points: 150</b><br>
+          <b>Description:</b> He did something he shouldn't have. We arrested him but need proof !!!
+        </p>
+      </div>
+
+      
+      <div class="py-4">
+        <h1>Files and Hints</h1>
+        <a href="https://mega.nz/file/2rAEyRCY#jUT_52h4GgW7_SHihVNTFyEDEGcUpv5Z0akE96il4I4" target="
+        _blank">
+          7zip file [https://mega.nz/file/2rAEyRCY#jUT_52h4GgW7_SHihVNTFyEDEGcUpv5Z0akE96il4I4]
+        </a>
+      </div>
+
+      
+      <div>
+        <h1>Recon</h1>
+        <p>The challenge had a  7zip file of size 473.8 MiB.</p>
+        <a href="img/Kazakhstan0.png" target="_blank"><img class="py-2"src="img/Kazakhstan0.png" ></a>
+        <p class="py-1" style="margin-bottom:0px;">By unzipping it we get a 2.0 GiB row file.</p>
+        <a href="img/Kazakhstan1.png" target="_blank"><img class="py-2"src="img/Kazakhstan1.png" ></a>
+
+      </div>
+      
+      <div>
+        <h2 class="he">Finding the Flag</h2>
+        <p class="py-1">As usual, we just tried strings because it's a file. and we found many sentences are passing.</p>
+        <code>strings -10 file.raw</code>
+        <script id="asciicast-yOo55tjYAyblNBhREoHxP0o8k" src="https://asciinema.org/a/yOo55tjYAyblNBhREoHxP0o8k.js" async></script>
+        <p class="py-1" style="margin-bottom:0px;">oh it huge lets try luck 👀. so tried a filtering with grep to check it contain "muctf{" which is the starting formate of our ctf</p>
+        <code>strings -10 file.raw | grep "muctf{"</code>
+        <p class="pb-1" style="margin-bottom:0px;">BOOM BOOM THE FLAG 😂😂!</p>
+        <a href="img/Kazakhstan2.png" target="_blank"><img class="py-2"src="img/Kazakhstan2.png" ></a>
+        
+        <h2 >Flag</h2>
+        <p class="py-2"><code>muctf{MemdUmPIIsHeREee}</code></p>
+
+        <h2 >PRO TIP : strings everything</h2>
+      </div>
+      
+    </div> 
+ 
+    <!-- footer  -->
+    
+    <div class=" scode">
+      <div class="d-flex justify-content-center  ">
+        
+        <a href="https://github.com/TeamFaux"><i class="fab fa-github p-3"></i></a>
+        <a href="tel:+91 9605917816"><i class="fa fa-phone p-3"></i></a>
+        <a href="mailto:0xteamfaux@gmail.com"><i class="fa fa-envelope p-3"></i></a>
+      </div>
+      <div class="text-center py-2 ">
+        Copyright © Team Faux - All rights reserved
+      </div>
+
+  </div>
+
+
+
+
+
+  </main>
+
+  
+
+
+
+</body>
+</html>
